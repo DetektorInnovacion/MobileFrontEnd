@@ -1,0 +1,168 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">      
+    <!-- Mapas -->
+    <link rel="stylesheet" href="theme/default/style.css" type="text/css">
+    <link rel="stylesheet" href="theme/default/google.css" type="text/css">
+    <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjpkAC9ePGem0lIq5XcMiuhR_wWLPFku8Ix9i2SXYRVK3e45q1BQUd_beF8dtzKET_EteAjPdGDwqpQ'>	</script>
+    <script src="lib/OpenLayers.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/custom.js"></script>
+	<!-- jQuery Mobile -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" type="text/css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.0.js"></script>
+    <!-- Custom Style -->	    
+    <link rel="stylesheet" href="css/LoginStyle.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="css/styleMenu.css" type="text/css"/> -->
+</head>
+<body >
+        <div data-role="page" data-transition="slidefade">
+            <!--header-->
+            <div data-role="header" data-position="fixed" id="Detektorheader">
+    	        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		        <a href="#add-plate" data-icon="plus" data-iconpos="notext">Placas</a> 
+                <div style="text-align:center">
+                    <img style="height: 45px" src="images/logos/logo-detektor.png" />
+                </div>				                            
+            </div>
+            <!--content--> 
+            <div data-role="content">            
+            
+            </div>
+			<!--panel menu-->                         
+			<div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
+                <ul>
+                    <li> 
+                        <img width="32" height="32" title="" alt="" src="images/icons/usuario.png" />
+                        <img  style="float: right; margin: 4px 5px 0px 0px; !important" width="32" height="32" title="" alt="" src="images/icons/configuracion.png" />                
+                        <a href="" class="contentLink">Usuario</a>
+                    </li>                       
+                </ul>
+                <div class="scrollable">
+                    <div class="separator">Aplicaciones</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li class="active">
+                        <img width="32" height="32" title="" alt="" src="images/icons/mapa.png" />
+                        <a href="" class="contentLink">Mapa</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/configuracionbasica.png" />
+                        <a href="" class="contentLink">Configuración Basica</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/aperturaremota.png" />
+                        <a href="" class="contentLink">Apertura de Puertas</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/apagadoremoto.png" />
+                        <a href="" class="contentLink">Apagado Remoto</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/cerradura.png" />
+                        <a href="" class="contentLink">Cerradura Electromecanica</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/odometro.png" />
+                        <a href="" class="contentLink">Odometro Virtual</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/temperatura.png" />
+                        <a href="" class="contentLink">Temperatura</a></li>                               
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/panico.png" />
+                        <a href="" class="contentLink">Panico</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/mantenimiento.png" />
+                        <a href="" class="contentLink">Mantenimiento</a></li><li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/mensaje.png" />
+                        <a href="" class="contentLink">Mensaje</a></li>			
+                    </ul>
+                    <div class="separator">Informes</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/alarmas.png" />
+                        <a href="" class="contentLink">Alarmas</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/estadistico.png" />
+                        <a href="" class="contentLink">Estadistico</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/personalizado.png" />
+                        <a href="" class="contentLink">Personalizado</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/informeultimopunto.png" />
+                        <a href="" class="contentLink">Ultimo Punto</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/informepanico.png" />                    
+                        <a href="" class="contentLink">Panicos</a></li>                                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/zonasrutas.png" />
+                        <a href="" class="contentLink">Zonas y Rutas</a></li>
+                    </ul>
+                    <!-- Para la segunda fase
+                    <div class="separator">ConduSe</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/choques.png" />
+                        <a href="" class="contentLink">Choques</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/frenadas.png" />
+                        <a href="" class="contentLink">Frenadas Bruscas</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/aceleradas.png" />
+                        <a href="" class="contentLink">Aceleraciones Bruscas</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/conductores.png" />
+                        <a href="" class="contentLink">Conductores</a></li>                
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/usovehiculo.png" />
+                        <a href="" class="contentLink">Uso de Vehiculo</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/conduseestadistico.png" />
+                        <a href="" class="contentLink">Estadisticas</a></li> 
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/rumboseguro.png" />
+                        <a href="" class="contentLink">Rumbo Seguro</a></li>   				
+                    </ul> 
+                    -->                         
+                    <div class="separator">Configuración</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/ayuda.png" />
+                        <a href="index.html" class="contentLink">Ayuda</a></li>			
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/salir.png" />
+                        <a href="index.html" class="contentLink">Salir</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/contacto.png" />
+                        <a href="" class="contentLink">Contacto</a></li>
+                        <li>
+                        <img width="32" height="32" title="" alt="" src="images/icons/acercade.png" />
+                        <a href="" class="contentLink">Acerca de... </a></li>
+                    </ul>	
+                </div>                
+    		</div>
+            <!--panel placas--> 
+    		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-plate">
+                <header>
+                    <input id="search" type="text" placeholder="Search">
+                </header>
+                <div class="scrollable">
+                    <div class="separator">Placas caracas</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li class="active">
+                        <a href="" class="contentLink">9IU765R</a></li>                
+                        <li>
+                        <a href="" class="contentLink">12W34R5</a></li>
+                    </ul>
+                    <div class="separator">Placas Valencia</div>
+                    <ul data-role="listview" data-theme="a" class="nav-search">
+                        <li class="active">
+                        <a href="" class="contentLink">1V2E3R</a></li>                
+                        <li>
+                        <a href="" class="contentLink">1Q2W3E</a></li>
+                    </ul>            	
+                </div>       	
+    		</div>                
+        </div>          
+</body>
+</html>
